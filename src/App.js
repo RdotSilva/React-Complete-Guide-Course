@@ -32,10 +32,13 @@ class App extends Component {
 				{ name: event.target.value, age: 29 },
 				{ name: "Stephanie", age: 27 }
 			]
-		});
+    })
+  };
 
-		togglePersonsHandler = () => {};
-	};
+		togglePersonsHandler = () => {
+      const doesShow = this.state.showPersons;
+      this.setState({showPersons: !doesShow});
+    };
 
 	render() {
 		const style = {
@@ -50,7 +53,7 @@ class App extends Component {
 			<div className="App">
 				<h1>Hi, I'm a React App</h1>
 				<p>This is really working!</p>
-				<button style={style} onClick={togglePersonsHandler}>
+				<button style={style} onClick={this.togglePersonsHandler}>
 					Switch Name
 				</button>
 				{this.state.showPersons === true ? (

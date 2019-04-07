@@ -67,16 +67,7 @@ class App extends Component {
 			assignedClasses.push(classes.bold); // classes = ['red', 'bold']
 		}
 
-		return (
-			<div className={classes.App}>
-				<h1>Hi, I'm a React App</h1>
-				<p className={assignedClasses.join(' ')}>This is really working!</p>
-				<button className={btnClass} onClick={this.togglePersonsHandler}>
-					Toggle Persons
-				</button>
-				{persons}
-			</div>
-		);
+		return <div className={classes.App}>{persons}</div>;
 		// return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Does this work now?'));
 	}
 }

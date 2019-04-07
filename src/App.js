@@ -1,15 +1,15 @@
-import React, { Component } from "react";
-import "./App.css";
-import Person from "./Person/Person";
+import React, { Component } from 'react';
+import './App.css';
+import Person from './Person/Person';
 
 class App extends Component {
 	state = {
 		persons: [
-			{ id: "tvf3", name: "Max", age: 28 },
-			{ id: "t5f3", name: "Manu", age: 29 },
-			{ id: "t1f3", name: "Stephanie", age: 26 }
+			{ id: 'tvf3', name: 'Max', age: 28 },
+			{ id: 't5f3', name: 'Manu', age: 29 },
+			{ id: 't1f3', name: 'Stephanie', age: 26 }
 		],
-		otherState: "some other value",
+		otherState: 'some other value',
 		showPersons: false
 	};
 
@@ -43,11 +43,12 @@ class App extends Component {
 
 	render() {
 		const style = {
-			backgroundColor: "white",
-			font: "inherit",
-			border: "1px solid blue",
-			padding: "8px",
-			cursor: "pointer"
+			backgroundColor: 'green',
+			color: 'white',
+			font: 'inherit',
+			border: '1px solid blue',
+			padding: '8px',
+			cursor: 'pointer'
 		};
 
 		let persons = null;

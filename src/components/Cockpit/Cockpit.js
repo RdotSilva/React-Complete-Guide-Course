@@ -13,6 +13,13 @@ const cockpit = props => {
 		};
 	}, []);
 
+	useEffect(() => {
+		console.log('[Cockpit.js] 2nd useEffect');
+		return () => {
+			console.log('[Cockpit.js] cleanup work in useEffect');
+		};
+	});
+
 	// useEffect();
 
 	const assignedClasses = [];

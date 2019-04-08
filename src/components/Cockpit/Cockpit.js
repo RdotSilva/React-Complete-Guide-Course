@@ -6,6 +6,8 @@ const cockpit = props => {
 	const toggleBtnRef = useRef(null);
 	const authContext = useContext(AuthContext);
 
+	console.log(authContext.authenticated);
+
 	useEffect(() => {
 		console.log('[Cockpit.js] useEffect');
 		// Http request...
@@ -49,9 +51,7 @@ const cockpit = props => {
 			<button ref={toggleBtnRef} className={btnClass} onClick={props.clicked}>
 				Toggle Persons
 			</button>
-			<AuthContext.Consumer>
-				{context => <button onClick={context.login}>Log in</button>}
-			</AuthContext.Consumer>
+			<button onClick={authContext.login}>Log in</button>
 		</div>
 	);
 };

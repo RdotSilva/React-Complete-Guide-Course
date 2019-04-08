@@ -5,6 +5,9 @@ import withClass from '../../../hoc/withClass';
 import classes from './Person.css';
 
 class Person extends Component {
+	componentDidMount() {
+		document.querySelector('input').focus();
+	}
 	render() {
 		console.log('[Person.js] rendering...');
 		return (
